@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIONAZ Shampoo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    h1 {
+      color: #2a8bcc;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      background: #2a8bcc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1c5f8a;
+    }
+    #ingredients {
+      display: none;
+      margin-top: 30px;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    ul {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌿 BIONAZ Shampoo Base</h1>
+  <p>Pure care for your hair.</p>
+
+  <button onclick="toggleIngredients()">See Ingredients</button>
+
+  <div id="ingredients">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>🌱 Amla Extract – strengthens hair roots</li>
+      <li>🌿 Reetha – natural cleanser</li>
+      <li>🍃 Shikakai – promotes shine & smoothness</li>
+      <li>🌸 Aloe Vera – soothes scalp</li>
+      <li>🌼 Kalonji (Black Seed) – prevents hair fall</li>
+      <li>🌾 Flaxseed (Alsi) – nourishes with omega-3</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleIngredients() {
+      const box = document.getElementById("ingredients");
+      if (box.style.display === "none") {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
+Commit changes
+[ Add files via upload ]
