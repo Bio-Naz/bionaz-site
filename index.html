@@ -28,7 +28,7 @@
     button:hover {
       background: #1c5f8a;
     }
-    #ingredients {
+    #ingredients, #contact {
       display: none;
       margin-top: 30px;
       text-align: left;
@@ -43,6 +43,18 @@
     ul {
       line-height: 1.8;
     }
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .contact-info a {
+      color: #2a8bcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -50,7 +62,8 @@
   <h1>🌿 BIONAZ Shampoo</h1>
   <p>Pure care for your hair.</p>
 
-  <button onclick="toggleIngredients()">See Ingredients</button>
+  <!-- Ingredients Button -->
+  <button onclick="toggleBox('ingredients')">See Ingredients</button>
 
   <div id="ingredients">
     <h2>Ingredients</h2>
@@ -68,10 +81,19 @@
     </ul>
   </div>
 
+  <!-- Contact Button -->
+  <button onclick="toggleBox('contact')">Contact Us</button>
+
+  <div id="contact" class="contact-info">
+    <h2>📞 Contact Information</h2>
+    <p>📱 WhatsApp: <a href="https://wa.me/923298088365" target="_blank">0329 8088365</a></p>
+    <p>📧 Email: <a href="mailto:bionazheralshampoo@gmail.com">bionazheralshampoo@gmail.com</a></p>
+  </div>
+
   <script>
-    function toggleIngredients() {
-      const box = document.getElementById("ingredients");
-      if (box.style.display === "none") {
+    function toggleBox(id) {
+      const box = document.getElementById(id);
+      if (box.style.display === "none" || box.style.display === "") {
         box.style.display = "block";
       } else {
         box.style.display = "none";
