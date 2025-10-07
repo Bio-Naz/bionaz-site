@@ -168,6 +168,61 @@
     transform: translateY(0);
   }
 }
+    /* Review Form Section */
+.review-form {
+  background: linear-gradient(135deg, #f0fff4, #e6f7ff);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 60px auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.review-form h2 {
+  color: #2a8bcc;
+  margin-bottom: 10px;
+}
+
+.review-form p {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #2a8bcc;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  outline: none;
+  transition: 0.3s;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: #1c5f8a;
+  box-shadow: 0 0 8px rgba(42, 139, 204, 0.3);
+}
+
+.send-review {
+  background: #2a8bcc;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-review:hover {
+  background: #1c5f8a;
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -265,4 +320,35 @@
     </div>
   </div>
 </section>
+<!-- Review Submission Section -->
+<section class="review-form">
+  <h2>Write a Review 📝</h2>
+  <p>We’d love to hear your thoughts about <strong>BIONAZ Shampoo</strong>!</p>
+
+  <form id="reviewForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="review" rows="5" placeholder="Write your review here..." required></textarea>
+    <button type="submit" class="send-review">Send via WhatsApp</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("reviewForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const review = document.getElementById("review").value.trim();
+
+    if (name === "" || review === "") {
+      alert("Please fill out both fields before sending!");
+      return;
+    }
+
+    const phoneNumber = "923298088365"; // Your WhatsApp number
+    const message = `*New BIONAZ Review*%0A%0A👤 Name: ${name}%0A💬 Review: ${review}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+</script>
 
