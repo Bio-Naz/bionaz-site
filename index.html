@@ -111,6 +111,65 @@
       text-decoration: underline;
     }
   </style>
+  /* Reviews Section */
+.reviews {
+  background: linear-gradient(135deg, #f7fff7, #e3f8e0);
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.review-title {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #2a623d;
+  font-weight: bold;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.review-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.review-text {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  font-weight: bold;
+  color: #2a623d;
+}
+
+/* Simple Fade Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 </head>
 <body>
 
@@ -186,3 +245,25 @@
   </section>
 </body>
 </html>
+<!-- Customer Reviews Section -->
+<section class="reviews">
+  <h2 class="review-title">What Our Customers Say 💬</h2>
+  
+  <div class="review-container">
+    <div class="review-card">
+      <p class="review-text">"This shampoo made my hair so soft and reduced hair fall in just two weeks. Highly recommended!"</p>
+      <h3 class="review-author">— Ayesha Khan</h3>
+    </div>
+
+    <div class="review-card">
+      <p class="review-text">"I love the natural ingredients! The fragrance is amazing and it made my scalp feel healthy."</p>
+      <h3 class="review-author">— Ali Raza</h3>
+    </div>
+
+    <div class="review-card">
+      <p class="review-text">"BIONAZ Shampoo is worth every penny. My hair looks fuller and shinier than ever!"</p>
+      <h3 class="review-author">— Sana Malik</h3>
+    </div>
+  </div>
+</section>
+
