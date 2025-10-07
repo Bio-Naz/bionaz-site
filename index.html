@@ -110,6 +110,64 @@
     .contact-info a:hover {
       text-decoration: underline;
     }
+    /* Reviews Section */
+.reviews {
+  background: linear-gradient(135deg, #f7fff7, #e3f8e0);
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.review-title {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #2a623d;
+  font-weight: bold;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.review-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.review-text {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  font-weight: bold;
+  color: #2a623d;
+}
+
+/* Simple Fade Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body>
